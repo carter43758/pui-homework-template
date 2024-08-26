@@ -1,5 +1,2 @@
-# PUI homework
-
-Deployed website: `add the URL to your deployed website`
-
-Repository link: `add the URL to this repository`
+Deployed website: https://
+Repository link: https://github.com/carter43758/PUI-HW/
