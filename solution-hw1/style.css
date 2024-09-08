@@ -138,11 +138,6 @@ select {
     padding-left: 450px;
 }
 
-.prod3{
-    margin-top: -2%;
-    font-size: 20px;
-}
-
 .cart2{
     font-weight: bold;
     font-size: 20px;
@@ -150,10 +145,7 @@ select {
 
 #prod, #cart {
     margin: 1%;
-}
-
-#prod{
-    margin-top: 0%;
+    font-size: 20px;
 }
 
 .items img{
