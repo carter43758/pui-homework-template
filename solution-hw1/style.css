@@ -65,7 +65,7 @@ a:link{
 
 .originals, .straws, .apples, .raisins, .doubles, .walnuts {
     width: 300px;
-    display: inline block;
+    display: block;
     margin: auto;
 }
 
