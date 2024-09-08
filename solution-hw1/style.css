@@ -34,6 +34,7 @@ span {
 
 #cart, #prod{
     text-decoration: none;
+    margin-top: 2%;
 }
 
 .prod, .cart{
