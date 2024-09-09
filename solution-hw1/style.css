@@ -42,6 +42,7 @@ span {
     justify-content: center;
 }
 
+/*it was easier for me to give the product & cart headers their own classes so I could manually style each one for each page */
 .prod, .prod3 {
     font-weight: bold;
 }
@@ -64,6 +65,7 @@ a:link{
     color: black;
 }
 
+/*styling each product class together*/
 .originals, .straws, .apples, .raisins, .doubles, .walnuts {
     width: 300px;
     display: block;
@@ -75,6 +77,7 @@ a:link{
     padding: 8px;
 }
 
+/*setting a universal font size and margin for each paragraph so I could manually tweak a few vs defining each one indivudally*/
 .products p{
    margin-top:1%;
    margin-bottom: 0%;
@@ -91,12 +94,13 @@ a:visited{
     height: 300px;
     border: 2px solid black;
     display: block;
-    /*https://developer.mozilla.org/en-US/docs/Web/CSS/display*/
+    /*how I learned abotu block elements and auto-margins for images - https://developer.mozilla.org/en-US/docs/Web/CSS/display*/
     margin-left: auto;
     margin-right: auto;
     margin-top: 40px;
 }
 
+/*different styling for the PDP image*/
 .original2
 {
     width: 600px;
