@@ -72,6 +72,7 @@ a:link{
 
 .originals:hover, .straws:hover, .apples:hover, .raisins:hover, .doubles:hover, .walnuts:hover {
     background: yellow;
+    padding: 8px;
 }
 
 .products p{
@@ -95,7 +96,6 @@ a:visited{
     margin-left: auto;
     margin-right: auto;
     margin-top: 40px;
-    padding: 1px;
 }
 
 .original2
