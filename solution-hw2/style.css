@@ -1,0 +1,241 @@
+h1{
+    text-align: center;
+    font-weight: 400;
+}
+
+.line1{
+    border: 1px solid black;
+    margin-bottom: 1.5%;
+}
+
+.logo {
+    margin-top: 5%;
+    width: 400px;
+}
+
+.line2 {
+    border: 2px solid black;
+    margin-top: 2%;
+    margin-bottom: 0.5%;
+}
+
+p{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.header p {
+    display: flex;
+    justify-content: center;
+}
+
+span {
+    background: yellow;
+}
+
+#cart, #prod{
+    text-decoration: none;
+    margin-top: 2%;
+}
+
+.prod, .cart{
+    font-size: 16px;
+    justify-content: center;
+}
+
+/*it was easier for me to give the product & cart headers their own classes so I could manually style each one for each page */
+.prod, .prod3 {
+    font-weight: bold;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 200;
+    margin-top: 6%;
+}
+
+#top{
+    margin-top: 5%;
+    font-size: 30px;
+}
+
+a:link{
+    color: black;
+}
+
+/*styling each product class together*/
+.originals, .straws, .apples, .raisins, .doubles, .walnuts {
+    width: 300px;
+    display: block;
+    margin: auto;
+}
+
+.originals:hover, .straws:hover, .apples:hover, .raisins:hover, .doubles:hover, .walnuts:hover {
+    background: yellow;
+    padding: 8px;
+}
+
+/*setting a universal font size and margin for each paragraph so I could manually tweak a few vs defining each one indivudally*/
+.products p{
+   margin-top:1%;
+   margin-bottom: 0%;
+   font-size: 25px;
+}
+
+a:visited{
+    color: black;
+}
+
+.products img
+{
+    width: 300px;
+    height: 300px;
+    border: 2px solid black;
+    display: block;
+    /*how I learned abotu block elements and auto-margins for images - https://developer.mozilla.org/en-US/docs/Web/CSS/display*/
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+}
+
+/*different styling for the PDP image*/
+.original2
+{
+    width: 600px;
+    height: 600px;
+    border: 3px solid black;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text {
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+}
+
+.desc {
+    font-size: 20px;
+    width: 250px;
+    padding-left: 450px;
+    margin-bottom: 2%;
+}
+
+.select{
+    padding-left: 450px;
+}
+
+select {
+    width: 200px;
+    height: 40px;
+    border: 2px solid black;
+}
+
+.select p{
+    margin-bottom: 1%;
+    margin-top: 4%;
+}
+
+.button p{
+    margin-top: 6%;
+    padding-left: 450px;
+}
+
+.cart2{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#prod, #cart {
+    margin: 1%;
+    font-size: 20px;
+}
+
+.items img{
+    display: block;
+    margin: auto;
+    margin-top: 3%;
+    width: 150px;
+    border: 2px solid black;
+    margin-top: 3%;
+}
+
+.cart p{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    margin: 0.5%;
+    margin-top: 0%;
+    font-size: 20px;
+}
+
+#checkout {
+    display: inline-flex;
+    justify-content: center;
+    border: 2px black solid;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;  
+}
+
+.line3{
+    border: 1.5px solid black;
+    width: 500px;
+}
+
+.glaze {
+    margin-top:1%
+}
+
+#add{
+    border: 2px solid black;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;  
+}
+
+#space{
+    background: none;
+    padding-right: 20px;
+}
+
+#remove{
+    font-size: 8px;
+    text-decoration: underline;
+}
+
+#link{
+    text-decoration: none;
+    margin-top: 1%;
+}
+
+.items p{
+    margin-top: 1%;
+    margin-bottom: 0%;
+}
+
+.items img{
+    margin-top: 4%;
+    margin-bottom: 1%;
+}
+
+.top{
+    margin-top: 8%;
+    font-size: 28px;
+}
+
+.line3{
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+.doubles3 p, .originals3 p {
+    margin: 0%;
+}
+
+#subtotal {
+    margin-top: 2%;
+}
