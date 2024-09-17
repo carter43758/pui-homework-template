@@ -1,199 +1,241 @@
-/*HEADER*/
+h1{
+    text-align: center;
+    font-weight: 400;
+}
+
+.line1{
+    border: 1px solid black;
+    margin-bottom: 1.5%;
+}
 
 .logo {
-    margin-top: 1%;
+    margin-top: 5%;
     width: 400px;
-    float: left;
-    padding-right: 2%;
 }
 
-.header p{
-    padding-top: 2.5%;
-    padding-right: 5%;
-}
-
-hr {
+.line2 {
     border: 2px solid black;
+    margin-top: 2%;
+    margin-bottom: 0.5%;
 }
 
-#cart, #prod, #cart2, #prod2 {
-    font-family: Arial, Helvetica, sans-serif;
+p{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.header p {
+    display: flex;
+    justify-content: center;
+}
+
+span {
+    background: yellow;
+}
+
+#cart, #prod{
     text-decoration: none;
-    float: right;
-    font-size: 20px;
+    margin-top: 2%;
 }
 
-#prod {
+.prod, .cart{
+    font-size: 16px;
+    justify-content: center;
+}
+
+/*it was easier for me to give the product & cart headers their own classes so I could manually style each one for each page */
+.prod, .prod3 {
     font-weight: bold;
-    background-color: yellow;
 }
 
-#cart2{
-    font-weight: bold;
-    background-color: yellow;
-}
-
-#prod2{
-    padding-right: 5%;
-}
-
-#cart{
-    padding-left: 5%;
-}
-
-a:link, a:visited{
-    color: black;
+h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 200;
+    margin-top: 6%;
 }
 
 #top{
-    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 5%;
     font-size: 30px;
 }
 
-/*GALLERY*/
-.products1, .products2 {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 80px;
+a:link{
+    color: black;
 }
 
-.products1 img, .products2 img
-{
-    width: 285px;
-    height: 285px;
-    border: 2px solid black;
+/*styling each product class together*/
+.originals, .straws, .apples, .raisins, .doubles, .walnuts {
+    width: 300px;
+    display: block;
+    margin: auto;
 }
 
 .originals:hover, .straws:hover, .apples:hover, .raisins:hover, .doubles:hover, .walnuts:hover {
     background: yellow;
-    padding: 10px;
+    padding: 8px;
 }
 
-.products1 p, .products2 p {
-   font-family: Arial, Helvetica, sans-serif;
-   font-size: 25px;
-   margin-top: 1%;
+/*setting a universal font size and margin for each paragraph so I could manually tweak a few vs defining each one indivudally*/
+.products p{
+   margin-top:1%;
    margin-bottom: 0%;
+   font-size: 25px;
 }
 
-/*PDP*/
+a:visited{
+    color: black;
+}
+
+.products img
+{
+    width: 300px;
+    height: 300px;
+    border: 2px solid black;
+    display: block;
+    /*how I learned abotu block elements and auto-margins for images - https://developer.mozilla.org/en-US/docs/Web/CSS/display*/
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+}
+
+/*different styling for the PDP image*/
 .original2
 {
     width: 600px;
     height: 600px;
     border: 3px solid black;
-    float: left;
-    margin-left: 65px;
-    margin-top: 4%;
-    margin-right: 5%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .text {
-    margin-top: 8%;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
 }
 
-.text p{
-    font-family: Arial, Helvetica, sans-serif;
+.desc {
     font-size: 20px;
-}
-
-.desc p {
-    margin: 0%;
-}
-
-.glaze {
-    padding-top: 50px;
+    width: 250px;
+    padding-left: 450px;
     margin-bottom: 2%;
 }
 
-.size{
-    margin-bottom: 2%;
-    padding-top: 20px;
+.select{
+    padding-left: 450px;
 }
 
 select {
-    width: 230px;
+    width: 200px;
     height: 40px;
     border: 2px solid black;
+}
+
+.select p{
+    margin-bottom: 1%;
+    margin-top: 4%;
+}
+
+.button p{
+    margin-top: 6%;
+    padding-left: 450px;
+}
+
+.cart2{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#prod, #cart {
+    margin: 1%;
+    font-size: 20px;
+}
+
+.items img{
+    display: block;
+    margin: auto;
+    margin-top: 3%;
+    width: 150px;
+    border: 2px solid black;
+    margin-top: 3%;
+}
+
+.cart p{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    margin: 0.5%;
+    margin-top: 0%;
+    font-size: 20px;
+}
+
+#checkout {
+    display: inline-flex;
+    justify-content: center;
+    border: 2px black solid;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;  
+}
+
+.line3{
+    border: 1.5px solid black;
+    width: 500px;
+}
+
+.glaze {
+    margin-top:1%
 }
 
 #add{
     border: 2px solid black;
     padding: 5px;
-    margin-left: 20px;
-    padding-left: 20px;
+    padding-left: 15px;
+    padding-right: 15px;  
+}
+
+#space{
+    background: none;
     padding-right: 20px;
-    background-color: yellow;
-    font-weight: 400;
-    float: inline-end;
-    margin-right: 50px;
 }
 
-.last p{
-    padding-top: 100px;
-    font-weight: bold;
-}
-
-/*CART*/
-.items{
-    display: grid;
-    margin-left: 425px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-}
-
-.items img{
-    width: 150px;
-    border: 4px black solid;
-    margin-top: 4%;
-}
-
-#remove {
+#remove{
+    font-size: 8px;
     text-decoration: underline;
 }
 
-.doubles3, .originals3 {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-#checkout {
-    float: right;
-    border: 2px black solid;
-    padding: 10px;
-    padding-left: 30px;
-    padding-right: 30px;
-    margin-right: 50px;
-    font-weight: bold;
-    background-color: yellow;
-}
-
-#link {
+#link{
     text-decoration: none;
+    margin-top: 1%;
 }
 
-#price2 {
-    float: right;
-    padding-right: 50px;
+.items p{
+    margin-top: 1%;
+    margin-bottom: 0%;
 }
 
-#price {
-    float: right;
-    padding-left: 205px;
+.items img{
+    margin-top: 4%;
+    margin-bottom: 1%;
 }
 
-.total{
-    margin-left: 190px;
-    font-size:  30px;
+.top{
+    margin-top: 8%;
+    font-size: 28px;
 }
 
-.options {
-    padding-top: 30px;
+.line3{
+    margin-top: 4%;
+    margin-bottom: 4%;
 }
 
-.options p {
+.doubles3 p, .originals3 p {
     margin: 0%;
-    font-size: 25px;
-    padding-left: 30px;
+}
+
+#subtotal {
+    margin-top: 2%;
 }
