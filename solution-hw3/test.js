@@ -21,3 +21,6 @@ const glazingPrice = glazingOptions[option].glazingPrice;
 const packMultiplier = packSizeOptions[size].packSize;
 return (basePrice + glazingPrice) * packSize;
 }
+
+let selectGlaze = document.querySelector('#glazing');
+let selectPack = document.querySelector('#pack');
