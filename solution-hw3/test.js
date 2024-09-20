@@ -1,32 +1,57 @@
-const basePrice = 2.49;
-
 const glazingOptions = [
-  "Keep original": 0.00,
-  "Sugar milk": 0.00,
-  "Vanilla milk": 0.50,
-  "Double chocolate": 1.50
+    {name: "Keep original", priceAdaptation: 0.00},
+    {name: "Sugar milk", priceAdaptation: 0.00},
+    {name: "Vanilla milk", priceAdaptation: 0.50},
+    {name: "Double chocolate", priceAdaptation: 1.50}
 ];
 
 const packSizeOptions = [
-  1: 1, 3: 3, 6: 5, 12: 10
+    {name: "1", multiplier: 1},
+    {name: "3", multiplier: 3},
+    {name: "6", multiplier: 5},
+    {name: "12", multiplier: 10}
 ];
 
-function price (basePrice, option, size) {   
-    const glazingPrice = packSizeOptions[size];
-    const packSize = glazingOptions[option];
-    return (basePrice + glazingPrice) * packSize;
+function selectGlazing() {
+    const selectGlaze = document.querySelector('#glazing').value;
+    for (i = 0; i < glazingOptions.length; i++)
+    {
+        const glazingPrice = glazingOptions[i];
+        const option = document.createElement('option');
+        option.textContent = glazingPrice.priceAdaptation;
+        selectGlaze.appendChild(option);
+    }
 }
 
-function selectGlaze{
-    let selectGlaze = document.querySelector('#glazing').value;
-
+function selectPack(){
+    const selectPack = document.querySelector('#pack').value;
+    for (i = 0; i < packSizeOptions.length; i++)
+    {
+        const packSize = packSizeOptions[i];
+        const option = document.createElement('option');
+        option.textContent = packSize.multiplier;
+        selectGlaze.appendChild(option);
+    }
 }
 
-function selectSize{
-    let selectPack = document.querySelector('#pack').value;
-    
-    
+function updatePrice() {   
+    const basePrice = 2.49;
+    const price = (basePrice + glazingPrice) * packSize;
+    price.toFixed(2);
+    let newPrice = document.getElementById("#price");
+    newPrice.innerHTML = price;
 }
 
-selectGlaze.addEventListener('change', )
-selectPack.addEventListener('change', )
+function glazingChange(){
+    selectGlaze.addEventListener('change', glazingChange)
+    let index = parseInt(glazingOptions.value);
+    let display = glazingOptions[index];
+    return updatePrice();
+}
+
+function packChange(){
+    selectPack.addEventListener('change', packChange)
+    let index = parseInt(packSizeOptions.value);
+    let display = packSizeOptions[index];
+    return updatePrice();
+}

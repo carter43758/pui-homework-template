@@ -25,19 +25,12 @@
           <p> your liking! </p>
       </div>
       <p class = "glaze"> Glazing: </p>
-      <select id = "glazing">
-        <option> Keep original</option>
-        <option> Sugar milk </option> 
-        <option> Vanilla milk </option>
-        <option> Double chocolate</option>
-        <!--https://www.w3schools.com/tags/tag_select.asp-->
+      <select id = "glazing" onchange="glazingChange(this)">
+        <option> </option>
       </select>
       <p class = "size"> Pack size: </p>
-      <select id = "pack">
-        <option>1</option>
-        <option>3</option>
-        <option>6</option>
-        <option>12</option>      </select>
+      <select id = "pack" onchange="packChange(this)">
+        <option></option>      </select>
       <span class = "last"> <p id = "price"> $2.49 <span id = "add"> Add to Cart </p> </span> </span>
       <!--span allows me to set individual spacing, coloring, & size for each button-->
     </div>
