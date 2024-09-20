@@ -1,31 +1,31 @@
 const basePrice = 2.49;
 
 const glazingOptions = [
-  {option: "Keep original", glazingPrice: 0.00},
-  {option: "Sugar milk", glazingPrice: 0.00},
-  {option: "Vanilla milk", glazingPrice: 0.50},
-  {option: "Double chocolate", glazingPrice: 1.50}
+  "Keep original": 0.00,
+  "Sugar milk": 0.00,
+  "Vanilla milk": 0.50,
+  "Double chocolate": 1.50
 ];
 
 const packSizeOptions = [
-  {size: 1, packSize: 1},
-  {size: 3, packSize: 3},
-  {size: 6, packSize: 5},
-  {size: 12, packSize: 10}
+  1: 1, 3: 3, 6: 5, 12: 10
 ];
 
 function price (basePrice, option, size) {   
-    let selectGlaze = document.querySelector('#glazing').value;
-    let selectPack = document.querySelector('#pack').value;
+    const glazingPrice = packSizeOptions[size];
+    const packSize = glazingOptions[option];
     return (basePrice + glazingPrice) * packSize;
 }
 
 function selectGlaze{
-    const glazingMultiplier = glazingOptions[option].glazingPrice;
+    let selectGlaze = document.querySelector('#glazing').value;
+
 }
 
 function selectSize{
-    const packMultiplier = packSizeOptions[size].packSize;
+    let selectPack = document.querySelector('#pack').value;
+    
+    
 }
 
 selectGlaze.addEventListener('change', )
