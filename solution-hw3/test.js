@@ -14,14 +14,19 @@ const packSizeOptions = [
   {size: 12, packSize: 10}
 ];
 
-function price (basePrice, option, size) {
-    const glazingPrice = glazingOptions[option].glazingPrice;
-    const packMultiplier = packSizeOptions[size].packSize;
+function price (basePrice, option, size) {   
+    let selectGlaze = document.querySelector('#glazing').value;
+    let selectPack = document.querySelector('#pack').value;
     return (basePrice + glazingPrice) * packSize;
 }
 
-let selectGlaze = document.querySelector('#glazing');
-let selectPack = document.querySelector('#pack');
+function selectGlaze{
+    const glazingMultiplier = glazingOptions[option].glazingPrice;
+}
 
-function glazingChange(element) {
-    const priceChange = glazingPrice.value}
+function selectSize{
+    const packMultiplier = packSizeOptions[size].packSize;
+}
+
+selectGlaze.addEventListener('change', )
+selectPack.addEventListener('change', )
