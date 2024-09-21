@@ -33,6 +33,8 @@ function selectPack() {
         selectGlaze.appendChild(option);
     }
 }
+
+/*
 function updatePrice() {   
     const basePrice = 2.49;
     const price = (basePrice + glazingPrice) * packSize;
@@ -41,7 +43,6 @@ function updatePrice() {
     newPrice.innerHTML = price;
 }
 
-/*
 function glazingChange(){
     selectGlaze.addEventListener('change', glazingChange);
     let index = parseInt(glazingOptions.value);
