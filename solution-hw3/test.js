@@ -21,7 +21,7 @@ function selectGlazing() {
         option.textContent = glazingPrice.name;
         selectGlaze.appendChild(option);
     }
-}
+};
 
 function selectPack() {
     const selectPack = document.querySelector('#pack');
@@ -32,7 +32,7 @@ function selectPack() {
         option.textContent = packSize.name;
         selectPack.appendChild(option);
     }
-}
+};
 
 /*
 function updatePrice() {   
@@ -55,4 +55,4 @@ function packChange(){
     let index = parseInt(packSizeOptions.value);
     let display = packSizeOptions[index];
     updatePrice();
-}
+}*/
