@@ -30,7 +30,7 @@ function selectPack() {
         const packSize = packSizeOptions[i];
         const option = document.createElement('option');
         option.textContent = packSize.name;
-        selectGlaze.appendChild(option);
+        selectPack.appendChild(option);
     }
 }
 
