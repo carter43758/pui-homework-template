@@ -13,27 +13,26 @@ const packSizeOptions = [
 ];
 
 function selectGlazing() {
-    const selectGlaze = document.querySelector('#glazing').value;
+    const selectGlaze = document.querySelector('#glazing');
     for (i = 0; i < glazingOptions.length; i++)
     {
         const glazingPrice = glazingOptions[i];
         const option = document.createElement('option');
-        option.textContent = glazingPrice.priceAdaptation;
+        option.textContent = glazingPrice.name;
         selectGlaze.appendChild(option);
     }
 }
 
-function selectPack(){
-    const selectPack = document.querySelector('#pack').value;
+function selectPack() {
+    const selectPack = document.querySelector('#pack');
     for (i = 0; i < packSizeOptions.length; i++)
     {
         const packSize = packSizeOptions[i];
         const option = document.createElement('option');
-        option.textContent = packSize.multiplier;
+        option.textContent = packSize.name;
         selectGlaze.appendChild(option);
     }
 }
-
 function updatePrice() {   
     const basePrice = 2.49;
     const price = (basePrice + glazingPrice) * packSize;
@@ -42,16 +41,17 @@ function updatePrice() {
     newPrice.innerHTML = price;
 }
 
+/*
 function glazingChange(){
-    selectGlaze.addEventListener('change', glazingChange)
+    selectGlaze.addEventListener('change', glazingChange);
     let index = parseInt(glazingOptions.value);
     let display = glazingOptions[index];
-    return updatePrice();
+    updatePrice();
 }
 
 function packChange(){
-    selectPack.addEventListener('change', packChange)
+    selectPack.addEventListener('change', packChange);
     let index = parseInt(packSizeOptions.value);
     let display = packSizeOptions[index];
-    return updatePrice();
+    updatePrice();
 }
