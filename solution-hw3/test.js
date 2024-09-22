@@ -12,8 +12,10 @@ const packSizeOptions = [
     {name: "12", multiplier: 10}
 ];
 
-function selectGlazing() {
+window.onload = function selectOption() {
     const selectGlaze = document.querySelector('#glazing');
+    const selectPack = document.querySelector('#pack');
+    
     for (i = 0; i < glazingOptions.length; i++)
     {
         const glazingPrice = glazingOptions[i];
@@ -21,10 +23,7 @@ function selectGlazing() {
         option.textContent = glazingPrice.name;
         selectGlaze.appendChild(option);
     }
-};
-
-function selectPack() {
-    const selectPack = document.querySelector('#pack');
+    
     for (i = 0; i < packSizeOptions.length; i++)
     {
         const packSize = packSizeOptions[i];
@@ -32,27 +31,26 @@ function selectPack() {
         option.textContent = packSize.name;
         selectPack.appendChild(option);
     }
-};
+}
 
-/*
 function updatePrice() {   
     const basePrice = 2.49;
     const price = (basePrice + glazingPrice) * packSize;
     price.toFixed(2);
     let newPrice = document.getElementById("#price");
-    newPrice.innerHTML = price;
+    newPrice.innerText = price;
 }
 
-function glazingChange(){
+function glazingChange(selectGlaze) {
     selectGlaze.addEventListener('change', glazingChange);
     let index = parseInt(glazingOptions.value);
     let display = glazingOptions[index];
     updatePrice();
 }
 
-function packChange(){
+function packChange(selectPack){
     selectPack.addEventListener('change', packChange);
     let index = parseInt(packSizeOptions.value);
     let display = packSizeOptions[index];
     updatePrice();
-}*/
+}
