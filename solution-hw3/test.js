@@ -17,6 +17,7 @@ let packSize = 0;
 let selectGlaze = 0;
 let selectPack = 0;
 
+//pulling selections
 window.onload = function selectOption() {
     const selectGlaze = document.querySelector('#glazing');
     const selectPack = document.querySelector('#pack');
@@ -38,6 +39,7 @@ window.onload = function selectOption() {
     }
 }
 
+//updating price
 function updatePrice() {   
     const basePrice = 2.49;
     let price = ((basePrice + glazingPrice) * packSize).toFixed(2);
@@ -48,11 +50,13 @@ function updatePrice() {
 
 //https://stackoverflow.com/questions/45522616/how-to-use-indexof-with-filter-in-javascript
 
+//reflecting new price
 function glazingChange(selectGlaze) {
     glazingPrice = glazingOptions.find(glaze => glaze.name === selectGlaze.value).priceAdaptation;
     updatePrice();
 }
 
+//got this from Office Hours
 function packChange(selectPack) {
     packSize = packSizeOptions.find(pack => pack.name === selectPack.value).multiplier;
     updatePrice();
