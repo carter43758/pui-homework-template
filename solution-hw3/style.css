@@ -129,9 +129,16 @@ select {
     margin-right: 50px;
 }
 
-.last p{
-    padding-top: 100px;
-    font-weight: bold;
+.last{
+    margin-top: 100px;
+    display: flex;
+    float: right;
+}
+
+#price{
+    display: flex;
+    float: right;
+    padding-left: 100px;
 }
 
 /*CART*/
@@ -174,13 +181,12 @@ select {
 }
 
 #price2 {
-    float: right;
-    padding-right: 50px;
+    padding-left: 200px;
 }
 
-#price {
+#price3 {
     float: right;
-    padding-left: 205px;
+    padding-right: 50px;
 }
 
 .total{
