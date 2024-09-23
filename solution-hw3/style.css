@@ -181,6 +181,7 @@ select {
 }
 
 #price2 {
+    float: right;
     padding-left: 200px;
 }
 
