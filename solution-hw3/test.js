@@ -12,6 +12,12 @@ const packSizeOptions = [
     {name: "12", multiplier: 10}
 ];
 
+let glazingPrice = 0; 
+let packSize = 0;
+let selectGlaze = 0;
+let selectPack = 0;
+const basePrice = 2.49;
+
 window.onload = function selectOption() {
     const selectGlaze = document.querySelector('#glazing');
     const selectPack = document.querySelector('#pack');
@@ -34,23 +40,21 @@ window.onload = function selectOption() {
 }
 
 function updatePrice() {   
-    const basePrice = 2.49;
-    const price = (basePrice + glazingPrice) * packSize;
-    price.toFixed(2);
-    let newPrice = document.getElementById("#price");
-    newPrice.innerText = price;
+    let glazePrice = glazingOptions.find(glaze => glaze.name === selectGlaze.value);
+    let packSize = packSizeOptions.find(pack => pack.name === selectPack.value);
+    let price = ((basePrice + glazingPrice) * packSize).toFixed(2);
+    let priceElement =  document.querySelector("#price");
+    priceElement.innerHTML = price;
 }
 
+//https://stackoverflow.com/questions/45522616/how-to-use-indexof-with-filter-in-javascript
+
 function glazingChange(selectGlaze) {
-    selectGlaze.addEventListener('change', glazingChange);
-    let index = parseInt(glazingOptions.value);
-    let display = glazingOptions[index];
+    console.log(packSize);
     updatePrice();
 }
 
-function packChange(selectPack){
-    selectPack.addEventListener('change', packChange);
-    let index = parseInt(packSizeOptions.value);
-    let display = packSizeOptions[index];
+function packChange(selectPack) {
+    console.log(packSize);
     updatePrice();
 }
