@@ -40,21 +40,19 @@ window.onload = function selectOption() {
 }
 
 function updatePrice() {   
-    let glazePrice = glazingOptions.find(glaze => glaze.name === selectGlaze.value);
-    let packSize = packSizeOptions.find(pack => pack.name === selectPack.value);
     let price = ((basePrice + glazingPrice) * packSize).toFixed(2);
-    let priceElement =  document.querySelector("#price");
-    priceElement.innerHTML = price;
+    let newPrice =  document.querySelector("#price");
+    newPrice.innerHTML = price;
 }
 
 //https://stackoverflow.com/questions/45522616/how-to-use-indexof-with-filter-in-javascript
 
 function glazingChange(selectGlaze) {
-    console.log(packSize);
+    glazePrice = glazingOptions.find(glaze => glaze.name === selectGlaze.value).priceAdaptation;
     updatePrice();
 }
 
 function packChange(selectPack) {
-    console.log(packSize);
+    let packSize = packSizeOptions.find(pack => pack.name === selectPack.value).multiplier;
     updatePrice();
 }
