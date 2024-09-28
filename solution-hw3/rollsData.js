@@ -24,3 +24,11 @@ const rolls = {
         "imageFile": "strawberry-cinnamon-roll.jpg"
     }    
 };
+
+const queryString = window.location.search;
+const params = new URLSearchParams(queryString);
+const rollType = params.get(‘roll’);
+
+cart = [
+
+]
