@@ -26,7 +26,21 @@ const rolls = {
 };
 
 const queryString = window.location.search;
+console.log(queryString);
 const params = new URLSearchParams(queryString);
-const rollType = params.get("roll");
+console.log(params);
 
+//getting roll type from HTML
+const rollType = params.get("roll");
+console.log(rollType);
+
+//updating text and image
+const rollText = document.querySelector('#top');
+rollText.innerText = rollType + "Cinnamon Roll";
+console.log(rollText);
+
+const rollImage = document.querySelector(".original2");
+rollImage.src = '../assets/products/' + rollType + '-cinnamon-roll.jpg';
+
+//adding to cart
 cart = [];
