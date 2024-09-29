@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <script src="../solution-hw3/test.js" defer></script>
+  <script src="../solution-hw3/rollsData.js"></script>
+  <title>Product Gallery</title>
+  
+  <body>
+    <div class = "header">
+      <a href="./gallery.html"> <img class  = "logo" src = "../assets/logo/logo-01.svg"> </a>
+      <p> <a id = "cart" href="./cart.html"> CART </a> <a id = "prod" href="./gallery.html"> PRODUCTS </a> </p>
+      <p> <hr> </p>
+      <p id = "top"> Our hand-made Cinnamon Rolls </p>
+    </div>
+
+    <div class = "products1">
+    <!--organizing each product into a class, then those classes into another class-->
+      <div class = "originals">
+        <a href="./display.html"> <img class="original" src= "../assets/products/original-cinnamon-roll.jpg"></a>
+        <p><a href="./display.html?roll=Original">Original cinnamon roll</a> </p>
+        <p>$2.49</p>
+      </div>
+
+      <div class = "apples">
+        <a href="./display.html"> <img class="apple" src="../assets/products/apple-cinnamon-roll.jpg"></a>
+        <p><a href="./display.html?roll=Apple">Apple cinnamon roll</a> </p>
+        <p>$3.49</p>
+      </div>
+
+      <div class = "raisins">
+        <a href="./display.html"> <img class="raisin" src="../assets/products/raisin-cinnamon-roll.jpg"></a>
+        <p><a href="./display.html?roll=Raisin">Raisin cinnamon roll</a>
+        <p>$2.99</p>
+      </div>
+
+    </div>
+
+    <div class = "products2">
+      <div class = "walnuts">
+        <a href="./display.html"> <img class="walnut" src="../assets/products/walnut-cinnamon-roll.jpg"> </a>
+        <p><a href="./display.html?roll=Walnut">Walnut cinnamon roll</a></p>
+        <p class = "price">$3.49</p>
+      </div>
+
+      <div class = "doubles">
+        <a href="./display.html"> <img class="double" src="../assets/products/double-chocolate-cinnamon-roll.jpg"> </a>
+        <p><a href="./display.html?roll=Double-Chocolate">Double-chocolate</a></p>
+        <p><a href="./display.html?roll=Double-Chocolate">cinnamon roll</a></p>
+        <p class = "price">$3.99</p>
+      </div>
+
+      <div class = "straws">
+        <a href="./display.html"> <img class="straw" src="../assets/products/strawberry-cinnamon-roll.jpg"></a>
+        <p><a href="./display.html?roll=Strawberry">Strawberry cinnamon roll</a></p>
+        <p class = "price">$3.99</p>
+      </div>
+
+    </div>
+
+  </body>
+</html>
