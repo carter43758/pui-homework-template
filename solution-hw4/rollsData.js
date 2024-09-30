@@ -39,7 +39,7 @@ const rollType = params.get('roll');
 
 //START HERE - TEST
 console.log(rollType);
-console.log(rolls["Apple"].imageFile)
+console.log(rolls["Apple"].imageFile);
 
 //updating text, image, & price variables from HTML
 //Lab 4 + https://stackoverflow.com/questions/17567925/how-to-check-for-specific-string-in-a-dictionary
