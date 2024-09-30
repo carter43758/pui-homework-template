@@ -55,5 +55,23 @@ const rollImage = document.querySelector('#original2');
 rollImage.src = '../assets/products/' + currentRoll.imageFile;
 
 //adding to cart
-addEventListener
+const button = document.querySelector(#add);
+addEventListener(click, button);
 cart = [];
+
+function addToCart(currentRoll)
+{
+    class Roll
+    {
+        constructor(rollType, rollGlazing, packSize, basePrice)
+        {
+            this.type = rollType;
+            this.glazing =  rollGlazing;
+            this.size = packSize;
+            this.basePrice = basePrice;
+        }
+    }
+    cart.push(Roll);
+    console.log(cart);
+};
+
