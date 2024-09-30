@@ -33,29 +33,25 @@ const rolls = {
 };
 
 //getting current roll
-const queryString = window.location.search;
-const params = new URLSearchParams(queryString);
-const rollType = params.get('roll');
-const currentRoll = rolls[rollType];
-
 //From Lab 4 + https://stackoverflow.com/questions/17567925/how-to-check-for-specific-string-in-a-dictionary
+let queryString = window.location.search;
+let params = new URLSearchParams(queryString);
+let rollType = params.get('roll');
+let currentRoll = rolls[rollType];
 
-//updating text, image, & price variables from HTML
-window.onload = function update() {
- 
-    const rollText = document.querySelector('#top');    
-    const rollPrice = document.querySelector('#price');
-    const rollImage = document.querySelector('#original2');    
-    
-    rollText.innerHTML = currentRoll.name;
-    rollPrice.innerText = currentRoll.basePrice;
-    rollImage.src = '../assets/products/' + currentRoll.imageFile;
+//updating text, price, & image
+const rollText = document.querySelector('#top');    
+const rollPrice = document.querySelector('#price');
+const rollImage = document.querySelector('#original2');
 
-    const button = document.querySelector('#add');
-    button.addEventListener(click, addToCart);
-}
+rollText.innerHTML = currentRoll.name;
+rollPrice.innerText = currentRoll.basePrice;
+rollImage.src = '../assets/products/' + currentRoll.imageFile;
 
 //adding to cart
+const button = document.getElementById('add');
+button.addEventListener('click', addToCart);  
+
 function addToCart(currentRoll)
 {
     const cart = [];
