@@ -65,6 +65,7 @@ function addToCart(currentRoll)
             this.basePrice = basePrice;
         }
     }
+    
     cart.push(Roll);
     console.log(cart);
 };
