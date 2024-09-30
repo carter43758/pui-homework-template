@@ -25,22 +25,26 @@ const rolls = {
     }    
 };
 
+//sample text
 const queryString = window.location.search;
-console.log(queryString);
 const params = new URLSearchParams(queryString);
-console.log(params);
+const rollType = params.get('roll');
 
-//getting roll type from HTML
-const rollType = params.get("roll");
-console.log(rollType);
+//finding current roll
+let currentRoll = rolls(rollType);
+function checkRoll(){
+    for currentRoll in rolls();
+    //https://stackoverflow.com/questions/13509669/find-out-if-a-variable-is-in-an-array
 
-//updating text and image
-const rollText = document.querySelector('#top');
-rollText.innerText = rollType + "Cinnamon Roll";
-console.log(rollText);
+}
+//pulling text, price, and image
+const rollText = document.getElementById('top');
+const rollPrice = document.getElementById('price');
+const rollImage = document.getElementById('original2');
 
-const rollImage = document.querySelector(".original2");
-rollImage.src = '../assets/products/' + rollType + '-cinnamon-roll.jpg';
+//updating text, price, & image
+rollText.textContent = rollType + "Cinnamon Roll";
+rollImage.src = '../assets/products/' + rollText + '-cinnamon-roll.jpg';
 
 //adding to cart
 cart = [];
