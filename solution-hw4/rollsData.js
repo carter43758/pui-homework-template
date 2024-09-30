@@ -1,50 +1,59 @@
+//https://www.geeksforgeeks.org/how-to-access-and-process-nested-objects-arrays-or-json/
 const rolls = {
     "Original": {
-        "basePrice": 2.49,
-        "imageFile": "original-cinnamon-roll.jpg"
+        name: "Original Cinnamon Roll",
+        basePrice: 2.49,
+        imageFile: "original-cinnamon-roll.jpg"
     },
     "Apple": {
-        "basePrice": 3.49,
-        "imageFile": "apple-cinnamon-roll.jpg"
+        name: "Apple Cinnamon Roll",
+        basePrice: 3.49,
+        imageFile: "apple-cinnamon-roll.jpg"
     },
     "Raisin": {
-        "basePrice": 2.99,
-        "imageFile": "raisin-cinnamon-roll.jpg"
+        name: "Raisin Cinnamon Roll",
+        basePrice: 2.99,
+        imageFile: "raisin-cinnamon-roll.jpg"
     },
     "Walnut": {
-        "basePrice": 3.49,
-        "imageFile": "walnut-cinnamon-roll.jpg"
+        name: "Walnut Cinnamon Roll",
+        basePrice: 3.49,
+        imageFile: "walnut-cinnamon-roll.jpg"
     },
     "Double-Chocolate": {
-        "basePrice": 3.99,
-        "imageFile": "double-chocolate-cinnamon-roll.jpg"
+        name: "Double-Chocolate Cinnamon Roll",
+        basePrice: 3.99,
+        imageFile: "double-chocolate-cinnamon-roll.jpg"
     },
     "Strawberry": {
-        "basePrice": 3.99,
-        "imageFile": "strawberry-cinnamon-roll.jpg"
+        name: "Strawberry Cinnamon Roll",
+        basePrice: 3.99,
+        imageFile: "strawberry-cinnamon-roll.jpg"
     }    
 };
 
 //sample text
 const queryString = window.location.search;
 const params = new URLSearchParams(queryString);
+console.log(params);
+
 const rollType = params.get('roll');
+console.log(rollType);
+console.log(rolls["Apple"].name)
 
-//finding current roll
-let currentRoll = rolls(rollType);
-function checkRoll(){
-    for currentRoll in rolls();
-    //https://stackoverflow.com/questions/13509669/find-out-if-a-variable-is-in-an-array
+//updating text, image, & price variables from HTML
+//Lab 4 + https://stackoverflow.com/questions/17567925/how-to-check-for-specific-string-in-a-dictionary
+const currentRoll = rolls["rollType"];
 
-}
-//pulling text, price, and image
-const rollText = document.getElementById('top');
-const rollPrice = document.getElementById('price');
-const rollImage = document.getElementById('original2');
+const rollText = document.querySelector('#top');
+rollText.innerText = currentRoll.name;
 
-//updating text, price, & image
-rollText.textContent = rollType + "Cinnamon Roll";
-rollImage.src = '../assets/products/' + rollText + '-cinnamon-roll.jpg';
+const rollPrice = document.querySelector('#price');
+rollPrice.innerText = currentRoll.basePrice;
+
+const rollImage = document.querySelector('#original2');
+rollImage.src = '../assets/products/' + currentRoll.imageFile;
 
 //adding to cart
+addEventListener
 cart = [];
