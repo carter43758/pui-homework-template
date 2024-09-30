@@ -35,11 +35,11 @@ const rolls = {
 //sample text
 const queryString = window.location.search;
 const params = new URLSearchParams(queryString);
-console.log(params);
-
 const rollType = params.get('roll');
+
+//START HERE - TEST
 console.log(rollType);
-console.log(rolls["Apple"].name)
+console.log(rolls["Apple"].imageFile)
 
 //updating text, image, & price variables from HTML
 //Lab 4 + https://stackoverflow.com/questions/17567925/how-to-check-for-specific-string-in-a-dictionary
@@ -55,12 +55,12 @@ const rollImage = document.querySelector('#original2');
 rollImage.src = '../assets/products/' + currentRoll.imageFile;
 
 //adding to cart
-const button = document.querySelector(#add);
-addEventListener(click, button);
-cart = [];
+const button = document.querySelector('#add');
+button.addEventListener(click, addToCart);
 
 function addToCart(currentRoll)
 {
+    const cart = [];
     class Roll
     {
         constructor(rollType, rollGlazing, packSize, basePrice)
@@ -74,4 +74,3 @@ function addToCart(currentRoll)
     cart.push(Roll);
     console.log(cart);
 };
-
