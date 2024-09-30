@@ -12,10 +12,10 @@ const packSizeOptions = [
     {name: "12", multiplier: 10}
 ];
 
-let glazingPrice = 0; 
-let packSize = 0;
-let selectGlaze = 0;
-let selectPack = 0;
+let glazingPrice = ""; 
+let packSize = "";
+let selectGlaze = "";
+let selectPack = "";
 
 //pulling selections
 window.onload = function selectOption() {
@@ -27,7 +27,7 @@ window.onload = function selectOption() {
         const glazingPrice = glazingOptions[i];
         const option = document.createElement('option');
         option.textContent = glazingPrice.name;
-        selectGlaze.appendChild(option);
+        selectGlaze.push(option);
     }
     
     for (i = 0; i < packSizeOptions.length; i++)
@@ -35,7 +35,7 @@ window.onload = function selectOption() {
         const packSize = packSizeOptions[i];
         const option = document.createElement('option');
         option.textContent = packSize.name;
-        selectPack.appendChild(option);
+        selectPack.push(option);
     }
 }
 
@@ -43,7 +43,6 @@ window.onload = function selectOption() {
 function updatePrice() {   
     const basePrice = 2.49;
     let price = ((basePrice + glazingPrice) * packSize).toFixed(2);
-    console.log(price);
     let newPrice =  document.querySelector('#price');
     newPrice.innerHTML = price;
 }

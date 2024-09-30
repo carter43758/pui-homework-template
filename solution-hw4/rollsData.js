@@ -49,12 +49,11 @@ rollPrice.innerText = currentRoll.basePrice;
 rollImage.src = '../assets/products/' + currentRoll.imageFile;
 
 //adding to cart
-const button = document.getElementById('add');
-button.addEventListener('click', addToCart);  
+const button = document.getElementById('add');  
+const cart = [];
 
 function addToCart(currentRoll)
 {
-    const cart = [];
     class Roll
     {
         constructor(rollType, rollGlazing, packSize, basePrice)
@@ -65,7 +64,6 @@ function addToCart(currentRoll)
             this.basePrice = basePrice;
         }
     }
-    
     cart.push(Roll);
     console.log(cart);
 };
