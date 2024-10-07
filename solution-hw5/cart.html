@@ -4,6 +4,7 @@
   <link rel="stylesheet" type="text/css" href="style.css" />
   <script src="../solution-hw4/test.js" defer></script>
   <script src="../solution-hw4/rollsData.js"></script>
+  <script src="../solution-hw4/cart.js"></script>
   <title>Shopping Cart</title>
   
   <body>
@@ -23,10 +24,10 @@
           <p class = "pack"> Pack size: 1 </p>
           </div>
         </li>
-        <p id = "remove"> Remove</p>
+        <p id = "remove" onclick="remove()> Remove </p>
           
 
-        <li class = "doubles3">
+        <li class = doubles3>
           <a href="./display.html"> <img class="double" src="../assets/products/double-chocolate-cinnamon-roll.jpg"> </a>
           <div class = "options">
           <p class = "name"> <a id = "link" href="./display.html">Double chocolate cinnamon roll</a> </p>
@@ -34,7 +35,7 @@
           <p class = "pack"> Pack size: 6 </p>
           </div>
         </li> 
-        <p id = "remove"> Remove</p>
+        <p id = "remove" onclick="remove()"> Remove</p>
     
 
       <div class = "checkout">
