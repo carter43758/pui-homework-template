@@ -45,7 +45,7 @@ function updatePrice() {
     let price = ((basePrice + glazingPrice) * packSize).toFixed(2);
     console.log(price);
     let newPrice =  document.querySelector('#price');
-    newPrice.innerText = price;
+    newPrice.innerText = "$" + price;
 }
 
 //https://stackoverflow.com/questions/45522616/how-to-use-indexof-with-filter-in-javascript

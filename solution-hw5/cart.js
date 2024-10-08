@@ -11,37 +11,27 @@ class Roll {
     }
 }
 
-function addToCart() {
-    const newRoll = new Roll(rollType, rollGlazing, packSize, rollPrice);
+function addToCart(currentRoll) {
+    const newRoll = new Roll (rollType, rollGlazing, packSize, rollPrice);
     cart.push(newRoll);
     return cart;
 }
 
-// calling new Rolls and adding them to cart
-const original = new Roll ('Original', 'Sugar Milk', 1, 2.49);
-const walnut = new Roll('Walnut', 'Vanilla Milk', 12, 3.49);
-const raisin = new Roll('Raisin', 'Sugar Milk', 3, 2.99);
-const apple = new Roll('Apple', 'Original', 3, 3.49);
-addToCart(apple, raisin, walnut, original);
-
 //reflecting new cart with roll info
-function createItem(newRoll){
+function createItem(newRoll) {
     const template = document.querySelector('#cart-template');
     const cartTemplate = template.content.cloneNode(true);
 
-    cart.element = cartTemplate.querySelector();
-
     //adding remove button so it's clickable (coded in HTML)
     const cartRemove = cartTemplate.querySelector('#remove');
-    console.log(cartRemove);
     cartRemove.addEventListener('click', () => {removeItems(newRoll)});
     
     //adding notecard as child to parent and updating with element & price
     const cartItems = document.querySelector('.items');
-    cartItems.appendChild(cart.element);
+    cartItems.appendChild(cartTemplate);
 
-    updateElement(newRoll);
-    updatePricePrice(newRoll);
+    updateItems(newRoll);
+    updatePrice(newRoll);
 }
 
 function updateItems(newRoll){
@@ -58,18 +48,25 @@ function updateItems(newRoll){
     cartName.innerText = newRoll.type;
     cartPrice.innerText = newRoll.basePrice;
 
-    cartImg.src = newRoll.src
+    cartImg.src = '5../assets/products/${newRoll.type.toLowerCase()}-cinnamon-roll.jpg';
+    cartImg.alt = rollType;
 }
   
 //function to remove from cart on click (coded in HTML)
-function removeItems(newRoll){
+function removeItems(newRoll) {
     newRoll.element.remove();
     cartTemplate.delete(newRoll);
     updatePrice();
 }
 
-//from Lab 5
+// calling new Rolls and adding them to cart
+const original = new Roll ('Original', 'Sugar Milk', 1, 2.49);
+const walnut = new Roll('Walnut', 'Vanilla Milk', 12, 3.49);
+const raisin = new Roll('Raisin', 'Sugar Milk', 3, 2.99);
+const apple = new Roll('Apple', 'Original', 3, 3.49);
+addToCart(apple, raisin, walnut, original);
+
+//from Lab 5 - displays all cart itemsz
 for (const newRoll of cart) {
-    console.log(newRoll);
-    createElement(newRoll);
+    createItem(newRoll);
   }
