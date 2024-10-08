@@ -44,7 +44,7 @@ const rollText = document.querySelector('#top');
 const rollPrice = document.querySelector('#price');
 const rollImage = document.querySelector('#original2');
 
-rollText.innerHTML = currentRoll.name;
+rollText.innerText = currentRoll.name;
 rollPrice.innerText = currentRoll.basePrice;
 rollImage.src = '../assets/products/' + currentRoll.imageFile;
 

@@ -1,5 +1,4 @@
 //initializing cart function, calling cart + Roll class
-
 let cart = [];
 
 class Roll {
