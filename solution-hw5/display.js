@@ -43,7 +43,6 @@ window.onload = function selectOption() {
 function updatePrice() {   
     const basePrice = 2.49;
     let price = ((basePrice + glazingPrice) * packSize).toFixed(2);
-    console.log(price);
     let newPrice =  document.querySelector('#price');
     newPrice.innerText = "$" + price;
 }
