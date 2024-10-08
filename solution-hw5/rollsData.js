@@ -64,6 +64,8 @@ function addToCart(currentRoll)
             this.basePrice = basePrice;
         }
     }
-    cart.push(Roll);
-    console.log(cart);
+    
+    const newRoll = new Roll (rollType, rollGlazing, packSize, basePrice);
+    cart.push(newRoll);
+    return cart;
 };

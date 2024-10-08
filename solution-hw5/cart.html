@@ -14,9 +14,10 @@
       <p> <hr> </p>
       <p id = "top"> Shopping Cart </p>
     </div>
-
+      
       <div class = "items">
-        <li class = "originals3">
+        <template id = "cart-template">
+          <li class = "originals3">
           <a href="./display.html"> <img class="original" src="../assets/products/original-cinnamon-roll.jpg" alt="Double Chocolate Cinnamon Roll"> </a>
           <div class = "options">
           <p class = "name"> <a id = "link" href="./display.html"> Original cinnamon roll </a> </p>
@@ -28,22 +29,22 @@
           
 
         <li class = doubles3>
-          <a href="./display.html"> <img class="double" src="../assets/products/double-chocolate-cinnamon-roll.jpg"> </a>
+          <a href="../display.html"> <img class="double" src="../assets/products/double-chocolate-cinnamon-roll.jpg"> </a>
           <div class = "options">
           <p class = "name"> <a id = "link" href="./display.html">Double chocolate cinnamon roll</a> </p>
           <p class = "glazing"> Glazing: Sugar milk <span id = "price2"> $27.45 </span> </p>
           <p class = "pack"> Pack size: 6 </p>
           </div>
         </li> 
-        <p id = "remove" onclick="remove()"> Remove</p>
-    
+        <p id = "remove" onclick="removeItems()"> Remove</p>
+      </template>
+    </div>
 
       <div class = "checkout">
         <hr>
         <p class = "total"> Total: <span id = "price3"> $29.94 </span> </p>
         <p> <span id = "checkout"> Checkout</span></p>
       </div>
-      </div>
-
+      
   </body>
 </html>

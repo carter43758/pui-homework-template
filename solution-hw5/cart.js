@@ -1,4 +1,4 @@
-//initializing cart
+//initializing cart function, calling cart + Roll class
 
 const cart = [];
 
@@ -11,45 +11,65 @@ class Roll {
     }
 }
 
-//calling new Rolls and adding them to cart
-const original = new Roll ('Original', 'Sugar Milk', 1, basePrice)
-cart.push(original);
-
-const walnut = new Roll('Walnut', 'Vanilla Milk', 12, basePrice);
-cart.push(walnutRoll);
-
-const raisin = new Roll('Raisin', 'Sugar Milk', 3, basePrice);
-cart.push(raisinRoll);
-
-const apple = new Roll('Apple', 'Original', 3, basePrice);
-cart.push(appleRoll);
-
-//reflecting new cart with all info
-function addToCart(){
-    const cartItems = document.querySelector('.items');
-    const cartTemplate = cartItems.content.cloneNode(true);
-
-    const cartGlaze = cartTemplate.querySelector('.glazing');
-    cartGlaze.innerText = Roll.glazing
-
-    const cartPack = cartTemplate.querySelector('.pack');
-    cartPack.innerText = Roll.size
-
-    const cartName = cartTemplate.querySelector('.name');
-    cartName.innerText = Roll.type
-
-    const cartImg = cartTemplate.querySelector('.link');
-    cartImg.src = ""
-
-    const cartPrice = cartTemplate.querySelector('.price2');
-    cartPrice.innerText = Roll.baseprice;
-    
-    updatePrice();
+function addToCart() {
+    const newRoll = new Roll(rollType, rollGlazing, packSize, rollPrice);
+    cart.push(newRoll);
+    return cart;
 }
 
-//function to remove from cart on click (coded in HTML)
-function remove(){
+// calling new Rolls and adding them to cart
+const original = new Roll ('Original', 'Sugar Milk', 1, 2.49);
+const walnut = new Roll('Walnut', 'Vanilla Milk', 12, 3.49);
+const raisin = new Roll('Raisin', 'Sugar Milk', 3, 2.99);
+const apple = new Roll('Apple', 'Original', 3, 3.49);
+addToCart(apple, raisin, walnut, original);
+
+//reflecting new cart with roll info
+function createItem(newRoll){
+    const template = document.querySelector('#cart-template');
+    const cartTemplate = template.content.cloneNode(true);
+
+    cart.element = cartTemplate.querySelector();
+
+    //adding remove button so it's clickable (coded in HTML)
     const cartRemove = cartTemplate.querySelector('#remove');
-    cartTemplate.remove(Roll);
+    console.log(cartRemove);
+    cartRemove.addEventListener('click', () => {removeItems(newRoll)});
+    
+    //adding notecard as child to parent and updating with element & price
+    const cartItems = document.querySelector('.items');
+    cartItems.appendChild(cart.element);
+
+    updateElement(newRoll);
+    updatePricePrice(newRoll);
+}
+
+function updateItems(newRoll){
+    //HTML elements that need updating
+    const cartGlaze = cartTemplate.querySelector('.glazing');
+    const cartName = cartTemplate.querySelector('.name');
+    const cartPack = cartTemplate.querySelector('.pack');
+    const cartImg = cartTemplate.querySelector('.link');
+    const cartPrice = cartTemplate.querySelector('.price2');
+
+    //copying template content over
+    cartGlaze.innerText = newRoll.glazing;
+    cartPack.innerText = newRoll.size;
+    cartName.innerText = newRoll.type;
+    cartPrice.innerText = newRoll.basePrice;
+
+    cartImg.src = newRoll.src
+}
+  
+//function to remove from cart on click (coded in HTML)
+function removeItems(newRoll){
+    newRoll.element.remove();
+    cartTemplate.delete(newRoll);
     updatePrice();
 }
+
+//from Lab 5
+for (const newRoll of cart) {
+    console.log(newRoll);
+    createElement(newRoll);
+  }
