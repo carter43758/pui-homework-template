@@ -30,11 +30,12 @@ addToCart(walnut);
 addToCart(original);
 
 //reflecting new cart with roll info
-function createItem(newRoll) {
+function createItem() {
+    
     const template = document.querySelector('#cart-template');
     const cartTemplate = template.content.cloneNode(true);
-
-    newRoll.element = cartTemplate.querySelector('.item'); // Assigning to the root item element
+    
+    newRoll.element = cartTemplate.querySelector('.container'); // Assigning to the root item element
     
     //adding remove button so it's clickable (coded in HTML)
     const cartRemove = cartTemplate.querySelector('#remove');
