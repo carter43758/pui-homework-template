@@ -7,7 +7,7 @@ class Roll {
         this.glazing = rollGlazing;
         this.size = packSize;
         this.basePrice = rollPrice;
-
+        this.ImageFile = 
         this.element = null;
     }
 }
