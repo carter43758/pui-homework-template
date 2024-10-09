@@ -60,7 +60,7 @@ function updateItems(newRoll) {
     const cartGlaze = newRoll.element.querySelector('.glazing');
     const cartName = newRoll.element.querySelector('.name');
     const cartPack = newRoll.element.querySelector('.pack');
-    const cartImg = newRoll.element.querySelector('#link');
+    const cartImg = newRoll.element.querySelector('.original');
     const cartPrice = newRoll.element.querySelector('#price2');
 
     //copying template content over
