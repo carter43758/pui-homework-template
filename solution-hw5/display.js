@@ -1,8 +1,8 @@
 const glazingOptions = [
-    {name: "Keep original", priceAdaptation: 0.00},
-    {name: "Sugar milk", priceAdaptation: 0.00},
-    {name: "Vanilla milk", priceAdaptation: 0.50},
-    {name: "Double chocolate", priceAdaptation: 1.50}
+    {name: "Keep Original", priceAdaptation: 0.00},
+    {name: "Sugar Milk", priceAdaptation: 0.00},
+    {name: "Vanilla Milk", priceAdaptation: 0.50},
+    {name: "Double Chocolate", priceAdaptation: 1.50}
 ];
 
 const packSizeOptions = [

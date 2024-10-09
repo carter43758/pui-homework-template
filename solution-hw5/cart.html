@@ -2,36 +2,37 @@
 <html lang="en">
   <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="style.css" />
-  <script src="../cart.js" > </script>
-  
+  <script src="../cart.js" defer> </script>
+  <script src="../display.js" > </script>
+
   <title>Shopping Cart</title>
   
   <body>
     <div class = "header">
-      <a href="./gallery.html"> <img class  = "logo" src = "../assets/logo/logo-01.svg" alt="Logo Cinnamon Roll"> </a>
+      <a href="./gallery.html"> <img class  = "logo" src = > </a>
       <p> <a id = "cart2" href="./cart.html"> CART </a> <a id = "prod2" href="./gallery.html"> PRODUCTS </a> </p>
       <p> <hr> </p>
       <p id = "top"> Shopping Cart </p>
     </div>
     
     <div class = "items">
-      <div class = "originals3">
+      <template class = "originals3">
         <div class = "roll-element">
-          <a href="./display.html"> <img class="original" src="../assets/products/original-cinnamon-roll.jpg" alt="Original Cinnamon Roll"> </a>
+          <a href="./display.html"> <img class="original" src= > </a>
           <div class = "options">
             <p class = "name"> <a id = "link" href="./display.html"> </a> </p>
-            <p class = "glazing"><span id ="price2"> </span> </p>
+            <p class = "glazing"> <p id ="price2"> </p> </p>
             <p class = "pack"> </p>
           </div>
           <a id = "remove" onclick="removeItems(this)"> Remove </a>
         </div>  
       
-      </div>   
+      </template>   
     </div>
 
     <div class = "checkout">
       <hr>
-      <p class = "total"> Total: <span id = "price3"> 0.00 </span> </p>
+      <p class = "total"> Total: <span id = "price3"> </span> </p>
       <p> <span id = "checkout"> Checkout</span></p>
     </div>
 
