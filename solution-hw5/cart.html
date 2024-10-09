@@ -8,43 +8,32 @@
   
   <body>
     <div class = "header">
-      <a href="./gallery.html"> <img class  = "logo" src = "../assets/logo/logo-01.svg" alt="Original Cinnamon Roll"> </a>
+      <a href="./gallery.html"> <img class  = "logo" src = "../assets/logo/logo-01.svg" alt="Logo Cinnamon Roll"> </a>
       <p> <a id = "cart2" href="./cart.html"> CART </a> <a id = "prod2" href="./gallery.html"> PRODUCTS </a> </p>
       <p> <hr> </p>
       <p id = "top"> Shopping Cart </p>
     </div>
     
-    <div class = "container">
-      <template id = 'cart-template'>
-        <div class = "items">
-          <li class = "originals3">
-            <a href="./display.html"> <img class="original" src="../assets/products/original-cinnamon-roll.jpg" alt="Double Chocolate Cinnamon Roll"> </a>
-            <div class = "options">
-              <p class = "name"> <a id = "link" href="./display.html"> Original cinnamon roll </a> </p>
-              <p class = "glazing"> Glazing: Keep original <span id ="price2"> </span> </p>
-              <p class = "pack"> Pack size: 1 </p>
-            </div>
-            <a href="" id = "remove" onclick="removeItems(this)"> Remove </a>
-            </li>
-
-          <li class = "doubles3">
-            <a href="../display.html"> <img class="double" src="../assets/products/double-chocolate-cinnamon-roll.jpg"> </a>
-            <div class = "options">
-              <p class = "name"> <a id = "link" href="./display.html">Double chocolate cinnamon roll</a> </p>
-              <p class = "glazing"> Glazing: Sugar milk <span id = "price2"> </span> </p>
-              <p class = "pack"> Pack size: 6 </p>
-            </div>
-            <a href="" id = "remove" onclick="removeItems(this)"> Remove </a>
-          </li> 
-        </div>
-      </template>
-
-      <div class = "checkout">
-        <hr>
-        <p class = "total"> Total: <span id = "price3"> 0.00 </span> </p>
-        <p> <span id = "checkout"> Checkout</span></p>
-      </div>
+    <div class = "items">
+      <div class = "originals3">
+        <div class = "roll-element">
+          <a href="./display.html"> <img class="original" src="../assets/products/original-cinnamon-roll.jpg" alt="Original Cinnamon Roll"> </a>
+          <div class = "options">
+            <p class = "name"> <a id = "link" href="./display.html"> </a> </p>
+            <p class = "glazing"><span id ="price2"> </span> </p>
+            <p class = "pack"> </p>
+          </div>
+          <a id = "remove" onclick="removeItems(this)"> Remove </a>
+        </div>  
       
+      </div>   
     </div>
+
+    <div class = "checkout">
+      <hr>
+      <p class = "total"> Total: <span id = "price3"> 0.00 </span> </p>
+      <p> <span id = "checkout"> Checkout</span></p>
+    </div>
+
   </body>
 </html>

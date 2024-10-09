@@ -24,18 +24,18 @@ const walnut = new Roll('Walnut', 'Vanilla Milk', 12, 3.49);
 const raisin = new Roll('Raisin', 'Sugar Milk', 3, 2.99);
 const apple = new Roll('Apple', 'Original', 3, 3.49);
 
-addToCart(apple);
-addToCart(raisin);
-addToCart(walnut);
 addToCart(original);
+addToCart(walnut);
+addToCart(raisin);
+addToCart(apple);
 
 //reflecting new cart with roll info
-function createItem() {
+function createItem(newRoll) {
     
-    const template = document.querySelector('#cart-template');
+    const template = document.querySelector('.originals3');
     const cartTemplate = template.content.cloneNode(true);
     
-    newRoll.element = cartTemplate.querySelector('.container'); // Assigning to the root item element
+    newRoll.element = cartTemplate.querySelector('.roll-element'); // Assigning to the root item element
     
     //adding remove button so it's clickable (coded in HTML)
     const cartRemove = cartTemplate.querySelector('#remove');
@@ -46,40 +46,40 @@ function createItem() {
     cartItems.appendChild(cartTemplate);
 
     updateItems(newRoll);
-    updatePrice();
+    //updatePrice();
 }
 
 //from Lab 5 - displays all cart items
 for (const newRoll of cart) {
     createItem(newRoll);
-  }
+}
   
 function updateItems(newRoll) {
     //HTML elements that need updating
     const cartGlaze = newRoll.element.querySelector('.glazing');
     const cartName = newRoll.element.querySelector('.name');
     const cartPack = newRoll.element.querySelector('.pack');
-    const cartImg = newRoll.element.querySelector('.link');
-    const cartPrice = newRoll.element.querySelector('.price2');
+    const cartImg = newRoll.element.querySelector('#link');
+    const cartPrice = newRoll.element.querySelector('#price2');
 
     //copying template content over
-    cartGlaze.innerText = newRoll.glazing;
-    cartPack.innerText = newRoll.size;
-    cartName.innerText = newRoll.type;
-    cartPrice.innerText = `$${newRoll.basePrice.toFixed(2)}`;
+    cartGlaze.innerText = "Glazing: " + newRoll.glazing;
+    cartPack.innerText = "Pack size: " + newRoll.size;
+    cartName.innerText = newRoll.type + " Cinnamon Roll";
+    cartPrice.innerText = "$" + newRoll.basePrice;
 
-    cartImg.src = `../assets/products/${newRoll.type.toLowerCase()}-cinnamon-roll.jpg`;
+    cartImg.src = "../assets/products/" + newRoll.type.toLowerCase() + "-cinnamon-roll.jpg";
     cartImg.alt = newRoll.type;
 }
 
 //updating price
-function updatePrice() {   
-    let totalPrice = 0;
-    totalPrice = ((newRoll.basePrice + newRoll.glazing) * rollImage.Size).toFixed(2);
+// function updatePrice() {   
+//   let totalPrice = 0;
+//   totalPrice = ((newRoll.basePrice + newRoll.glazing) * rollImage.Size).toFixed(2);
 
-    const newPrice =  document.querySelector('#price');
-    newPrice.innerText = "$" + totalPrice;
-}
+//     const newPrice =  document.querySelector('#price');
+//     newPrice.innerText = "$" + totalPrice;
+// }
 
 //function to remove from cart on click (coded in HTML)
 function removeItems(newRoll) {
