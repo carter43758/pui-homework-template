@@ -40,32 +40,13 @@ let rollType = params.get('roll');
 let currentRoll = rolls[rollType];
 
 //updating text, price, & image
-const rollText = document.querySelector('#top');    
+const rollText = document.querySelector('#top1');    
 const rollPrice = document.querySelector('#price');
 const rollImage = document.querySelector('#original2');
 
-rollText.innerText = currentRoll.name;
-rollPrice.innerText = currentRoll.basePrice;
+// rollText.innerText = currentRoll.name;
+// rollPrice.innerText = currentRoll.basePrice;
 rollImage.src = '../assets/products/' + currentRoll.imageFile;
 
 //adding to cart
-const button = document.getElementById('add');  
-const cart = [];
-
-function addToCart(currentRoll)
-{
-    class Roll
-    {
-        constructor(rollType, rollGlazing, packSize, basePrice)
-        {
-            this.type = rollType;
-            this.glazing = rollGlazing;
-            this.size = packSize;
-            this.basePrice = basePrice;
-        }
-    }
-    
-    const newRoll = new Roll (rollType, rollGlazing, packSize, basePrice);
-    cart.push(newRoll);
-    return cart;
-};
+const button = document.getElementById('add');
